@@ -1,0 +1,14 @@
+<h1>Hello, world!</h1>
+<h1> First request</h1>
+<!-- <p *ngFor="let operation of operationsFirst;">
+  {{operation}}
+</p> -->
+
+<button (click)="getDataSecondRequest()">Second Request</button>
+
+<ng-container *ngIf="operationsSecond">
+  <h1> Second request </h1>
+  <!-- <p *ngFor="let operationSecond of operationsSecond;">
+    {{operationSecond}}
+  </p> -->
+</ng-container>
