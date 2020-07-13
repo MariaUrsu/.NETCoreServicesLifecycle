@@ -1,14 +1,14 @@
-<h1>Hello, world!</h1>
+<h1>Dependency Injection Lifecycle</h1>
 <h1> First request</h1>
-<!-- <p *ngFor="let operation of operationsFirst;">
-  {{operation}}
-</p> -->
+<p *ngFor="let operation of firstOperations;">
+  {{operation.name}} - {{operation.operationId}}
+</p>
 
 <button (click)="getDataSecondRequest()">Second Request</button>
 
-<ng-container *ngIf="operationsSecond">
+<ng-container *ngIf="secondOperations">
   <h1> Second request </h1>
-  <!-- <p *ngFor="let operationSecond of operationsSecond;">
-    {{operationSecond}}
-  </p> -->
+  <p *ngFor="let secondOperation of secondOperations;">
+    {{secondOperation.name}} - {{secondOperation.operationId}}
+  </p>
 </ng-container>

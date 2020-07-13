@@ -36,19 +36,18 @@ namespace ASP.NETCorePresentation.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //var tempList = new IOperation[]
-            //{
-            //    new Operation("Transient Controller", _transientOperation.OperationId),
-            //    new Operation("Scoped Controller", _scopedOperation.OperationId),
-            //    new Operation("Singleton Controller", _singletonOperation.OperationId),
+            var tempList = new[]
+            {
+                new OperationResult("Transient Controller", _transientOperation.OperationId),
+                new OperationResult("Scoped Controller", _scopedOperation.OperationId),
+                new OperationResult("Singleton Controller", _singletonOperation.OperationId),
 
-            //    new Operation("Transient Service", _operationService.TransientOperation.OperationId),
-            //    new Operation("Scoped Service", _operationService.ScopedOperation.OperationId),
-            //    new Operation("Singleton Service", _operationService.SingletonOperation.OperationId)
-            //};
+                new OperationResult("Transient Service", _operationService.TransientOperation.OperationId),
+                new OperationResult("Scoped Service", _operationService.ScopedOperation.OperationId),
+                new OperationResult("Singleton Service", _operationService.SingletonOperation.OperationId)
+            };
 
-            //return Ok(tempList);
-            return Ok();
+            return Ok(tempList);
         }
     }
 }

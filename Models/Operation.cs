@@ -8,11 +8,11 @@ namespace ASP.NETCorePresentation.Models
         {
         }
 
+        public Guid OperationId { get; }
+
         public Operation(Guid id)
         {
             OperationId = id;
         }
-
-        public Guid OperationId { get; private set; }
     }
 }
