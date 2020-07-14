@@ -41,10 +41,12 @@ namespace ASP.NETCorePresentation.Controllers
                 new OperationResult("Transient Controller", _transientOperation.OperationId),
                 new OperationResult("Scoped Controller", _scopedOperation.OperationId),
                 new OperationResult("Singleton Controller", _singletonOperation.OperationId),
+                new OperationResult("Singleton Instance Controller", _operationSingletonInstance.OperationId),
 
                 new OperationResult("Transient Service", _operationService.TransientOperation.OperationId),
                 new OperationResult("Scoped Service", _operationService.ScopedOperation.OperationId),
-                new OperationResult("Singleton Service", _operationService.SingletonOperation.OperationId)
+                new OperationResult("Singleton Service", _operationService.SingletonOperation.OperationId),
+                new OperationResult("Singleton Instance Service", _operationSingletonInstance.OperationId),
             };
 
             return Ok(tempList);
